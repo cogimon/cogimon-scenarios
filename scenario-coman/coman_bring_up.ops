@@ -10,7 +10,7 @@ loadComponent("gazebo","RTTGazeboEmbedded")
 
 setActivity("gazebo",0,10,ORO_SCHED_OTHER)
 
-gazebo.argv = strings("--verbose","-s /home/enrico/robotology-superbuild/build/external/rtt-gazebo-clock-plugin/librtt_gazebo_system.so")
+gazebo.argv = strings("--verbose","-s /home/enrico/robotology-superbuild/build/external/rtt-gazebo-clock-plugin/libRTTGazeboClockPlugin.so")
 
 gazebo.configure()
 
