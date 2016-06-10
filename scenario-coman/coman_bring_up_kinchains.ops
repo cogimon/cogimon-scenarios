@@ -1,0 +1,137 @@
+// gazebo include path
+//path("/homes/dwigand/code/cogimon/gazeboAlt/rtt_gazebo_embedded/build/orocos")
+// eigen_typekit
+//path("/homes/dwigand/code/cogimon/rtt_geometry/eigen_typekit/build/orocos")
+// kdl_typekit
+//path("/homes/dwigand/code/cogimon/rtt_geometry/kdl_typekit/build/orocos")
+// rst-rt-typekit
+//path("/homes/dwigand/code/rtt-rrct-typekit/build/src/orocos")
+// rtt-rsb-transport
+//path("/homes/dwigand/code/cogimon/rtt-rsb-transport/build/src/orocos")
+// rtt-gazebo-robot-sim
+//path("/homes/dwigand/code/cogimon/gazeboAlt/rSim/build/orocos")
+//rtt-core-extensions
+//path("/homes/dwigand/code/cogimon/gazeboAlt/rtt-core-extensions/build/orocos")
+
+//## gnuplot -e "set key autotitle columnhead; plot for [col=9:15:1] \"reports.dat\" using 1:col with lines; pause -1"
+
+// export GAZEBO_PLUGIN_PATH=/homes/dwigand/code/cogimon/rtt_gazebo_system/build
+
+// export GAZEBO_MODEL_PATH=/homes/dwigand/code/cogimon/cogimon-gazebo-models
+
+
+
+//### general setup
+
+
+//## load typekits
+import("eigen_typekit")
+import("kdl_typekit")
+import("rst-rt_typekit")
+//## load transport plugins
+import("rtt_rsbcomm")
+
+//## import component libs
+import("rtt_gazebo_embedded") # gazebo
+import("rtt-gazebo-robot-sim") # generic robot sim (coman values)
+import("rtt-core-extensions") # kinematic chain views
+
+
+//### instantiate components
+
+
+//## gazebo
+loadComponent("gazebo","RTTGazeboEmbedded")
+setActivity("gazebo",0,10,ORO_SCHED_OTHER)
+gazebo.argv = strings("--verbose") # This is optional
+gazebo.add_plugin("libRTTGazeboClockPlugin.so")
+
+
+//## robot sim
+loadComponent("coman_gazebo","cogimon::robotSim")
+setActivity("coman_gazebo",0,11,ORO_SCHED_OTHER)
+
+
+//## JointPositionCtrl View
+loadComponent("coman_left_arm_JointPositionCtrl","cogimon::RTTKinematicChainJa")
+setActivity("coman_left_arm_JointPositionCtrl",0.01,12,ORO_SCHED_OTHER)
+
+
+//### load simulation related parts (i.e. models)
+
+
+//# actually start the gzserver
+gazebo.configure()
+//# start the simulation process
+gazebo.start()
+//# disable the dynamics
+gazebo.toggleDynamicsSimulation(false)
+//# load model
+gazebo.spawn_model("iit-coman-robot", "model://iit-coman", 10)
+
+
+//### configure components
+
+//## configure coman sim
+//# attach previously loaded model
+coman_gazebo.getModel("iit-coman-robot")
+//# execute the simulation bridge (coman)
+coman_gazebo.configure()
+
+//## configure kin. chain view
+coman_left_arm_JointPositionCtrl.addPortRobotside("left_arm_JointPositionCtrl", 7)
+coman_left_arm_JointPositionCtrl.addPortRobotFBside("left_arm_JointFeedback", 7)
+coman_left_arm_JointPositionCtrl.setChainandCtrlName("left_arm", "JointPositionCtrl")
+coman_left_arm_JointPositionCtrl.configure()
+
+
+//### connect components
+
+
+//## connect coman_left_arm_JointPositionCtrl to coman_gazebo
+var ConnPolicy cp;
+//# command
+connect("coman_left_arm_JointPositionCtrl.left_arm_JointPositionCtrl", "coman_gazebo.left_arm_JointPositionCtrl", cp)
+//# feedback
+connect("coman_gazebo.left_arm_JointFeedback", "coman_left_arm_JointPositionCtrl.left_arm_JointFeedback", cp)
+
+
+//### retrieve joint information
+
+
+coman_left_arm_JointPositionCtrl.retrieveJointMappings()
+
+
+//### connect to outside world
+
+#/vol/cogimon/bin/rsb-toolscl0.13 send -I/vol/cogimon/share/rst0.13/proto/stable/ -l/vol/cogimon/share/rst0.13/proto/stable/rst/kinematics/JointAngles.proto 'pb:.rst.kinematics.JointAngles:{angles: [-0.2,0.5,0,0,0,0,0] }' 'socket:/coman/left_arm/JointPositionCtrl'
+stream("coman_left_arm_JointPositionCtrl.command", rsb.transport.socket.scope("/coman/left_arm/JointPositionCtrl"))
+
+stream("coman_left_arm_JointPositionCtrl.feedback", rsb.transport.socket.scope("/coman/left_arm/JointFeedback"))
+
+
+//### start components
+
+
+coman_left_arm_JointPositionCtrl.start()
+
+
+//### enable physics simulation again
+
+
+gazebo.toggleDynamicsSimulation(true)
+
+
+//### start controller
+
+//### Logging:
+
+loadComponent("file_reporter", "OCL::FileReporting")
+loadService("file_reporter", "marshalling")
+
+connectPeers("file_reporter","coman_left_arm_JointPositionCtrl")
+
+file_reporter.reportComponent("coman_left_arm_JointPositionCtrl")
+
+file_reporter.configure
+file_reporter.start
