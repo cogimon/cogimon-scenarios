@@ -1,29 +1,3 @@
-// gazebo include path
-//path("/homes/dwigand/code/cogimon/gazeboAlt/rtt_gazebo_embedded/build/orocos")
-// eigen_typekit
-//path("/homes/dwigand/code/cogimon/rtt_geometry/eigen_typekit/build/orocos")
-// kdl_typekit
-//path("/homes/dwigand/code/cogimon/rtt_geometry/kdl_typekit/build/orocos")
-// rst-rt-typekit
-//path("/homes/dwigand/code/rtt-rrct-typekit/build/src/orocos")
-// rtt-rsb-transport
-//path("/homes/dwigand/code/cogimon/rtt-rsb-transport/build/src/orocos")
-// rtt-gazebo-robot-sim
-//path("/homes/dwigand/code/cogimon/gazeboAlt/rSim/build/orocos")
-//rtt-core-extensions
-//path("/homes/dwigand/code/cogimon/gazeboAlt/rtt-core-extensions/build/orocos")
-
-//## gnuplot -e "set key autotitle columnhead; plot for [col=9:15:1] \"reports.dat\" using 1:col with lines; pause -1"
-
-// export GAZEBO_PLUGIN_PATH=/homes/dwigand/code/cogimon/rtt_gazebo_system/build
-
-// export GAZEBO_MODEL_PATH=/homes/dwigand/code/cogimon/cogimon-gazebo-models
-
-
-
-//### general setup
-
-
 //## load typekits
 import("eigen_typekit")
 import("kdl_typekit")
@@ -32,9 +6,9 @@ import("rst-rt_typekit")
 import("rtt_rsbcomm")
 
 //## import component libs
-import("rtt_gazebo_embedded") # gazebo
-import("rtt-gazebo-robot-sim") # generic robot sim (coman values)
-import("rtt-core-extensions") # kinematic chain views
+import("rtt_gazebo_embedded") 
+import("rtt-gazebo-robot-sim") 
+import("rtt-core-extensions") 
 
 
 //### instantiate components
@@ -43,7 +17,7 @@ import("rtt-core-extensions") # kinematic chain views
 //## gazebo
 loadComponent("gazebo","RTTGazeboEmbedded")
 setActivity("gazebo",0,10,ORO_SCHED_OTHER)
-gazebo.argv = strings("--verbose") # This is optional
+gazebo.argv = strings("--verbose") 
 gazebo.add_plugin("libRTTGazeboClockPlugin.so")
 
 
