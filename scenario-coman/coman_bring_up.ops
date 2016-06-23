@@ -5,6 +5,7 @@ import("kdl_typekit")
 import("rst-rt_typekit")
 import("rtt_rsbcomm")
 import("rtt_gazebo_embedded")
+require("os")
 
 loadComponent("gazebo","RTTGazeboEmbedded")
 
@@ -25,6 +26,9 @@ import("rtt-gazebo-robot-sim")
 loadComponent("coman_gazebo","cogimon::robotSim")
 setActivity("coman_gazebo",0,11,ORO_SCHED_OTHER)
 
+var string urdf_path = os.getenv("ROBOTOLOGY_ROOT") + "/robots/cogimon-gazebo-models/iit-coman/model.urdf"
+var string srdf_path = os.getenv("ROBOTOLOGY_ROOT") + "/robots/cogimon-gazebo-models/iit-coman/coman.srdf"
+coman_gazebo.loadURDFAndSRDF(urdf_path, srdf_path)
 coman_gazebo.getModel("coman")
 coman_gazebo.configure()
 
