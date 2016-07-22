@@ -23,20 +23,20 @@ gazebo.spawn_model("coman", "model://iit-coman", 20)
 
 import("rtt-gazebo-robot-sim")
 
-loadComponent("coman_gazebo","cogimon::robotSim")
-setActivity("coman_gazebo",0,11,ORO_SCHED_OTHER)
+loadComponent("coman","cogimon::robotSim")
+setActivity("coman",0,11,ORO_SCHED_OTHER)
 
 var string urdf_path = os.getenv("ROBOTOLOGY_ROOT") + "/robots/cogimon-gazebo-models/iit-coman/model.urdf"
 var string srdf_path = os.getenv("ROBOTOLOGY_ROOT") + "/robots/cogimon-gazebo-models/iit-coman/coman.srdf"
-coman_gazebo.loadURDFAndSRDF(urdf_path, srdf_path)
-coman_gazebo.getModel("coman")
-coman_gazebo.configure()
+coman.loadURDFAndSRDF(urdf_path, srdf_path)
+coman.getModel("coman")
+coman.configure()
 
 gazebo.toggleDynamicsSimulation(true)
 
-stream("coman_gazebo.torso_JointPositionCtrl", rsb.transport.socket.scope("/torso/cmd"))
-stream("coman_gazebo.left_arm_JointPositionCtrl", rsb.transport.socket.scope("/left_arm/cmd"))
-stream("coman_gazebo.right_arm_JointPositionCtrl", rsb.transport.socket.scope("/right_arm/cmd"))
-stream("coman_gazebo.left_leg_JointPositionCtrl", rsb.transport.socket.scope("/left_leg/cmd"))
-stream("coman_gazebo.right_leg_JointPositionCtrl", rsb.transport.socket.scope("/right_leg/cmd"))
+stream("coman.torso_JointPositionCtrl", rsb.transport.socket.scope("/torso/cmd"))
+stream("coman.left_arm_JointPositionCtrl", rsb.transport.socket.scope("/left_arm/cmd"))
+stream("coman.right_arm_JointPositionCtrl", rsb.transport.socket.scope("/right_arm/cmd"))
+stream("coman.left_leg_JointPositionCtrl", rsb.transport.socket.scope("/left_leg/cmd"))
+stream("coman.right_leg_JointPositionCtrl", rsb.transport.socket.scope("/right_leg/cmd"))
 
