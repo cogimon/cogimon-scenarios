@@ -32,6 +32,11 @@ coman.loadURDFAndSRDF(urdf_path, srdf_path)
 coman.getModel("coman")
 coman.configure()
 
+var array ref = array(-0.4, 0.0, 0.0, -0.4, 0.0, 0.0, 0.0)
+coman.setInitialPosition("left_arm", ref)
+coman.setInitialPosition("right_arm", ref)
+coman.reset_model_configuration()
+
 gazebo.toggleDynamicsSimulation(true)
 
 stream("coman.torso_JointPositionCtrl", rsb.transport.socket.scope("/torso/cmd"))
