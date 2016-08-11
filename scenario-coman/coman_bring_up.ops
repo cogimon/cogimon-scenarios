@@ -35,7 +35,6 @@ coman.configure()
 var array ref = array(-0.4, 0.0, 0.0, -0.4, 0.0, 0.0, 0.0)
 coman.setInitialPosition("left_arm", ref)
 coman.setInitialPosition("right_arm", ref)
-coman.reset_model_configuration()
 
 gazebo.toggleDynamicsSimulation(true)
 
