@@ -1,0 +1,56 @@
+#!/usr/bin/env deployer
+
+import("eigen_typekit")
+import("kdl_typekit")
+import("rst-rt_typekit")
+import("rtt_rsbcomm")
+import("rtt_gazebo_embedded")
+require("os")
+
+loadComponent("gazebo","RTTGazeboEmbedded")
+
+setActivity("gazebo",0,10,ORO_SCHED_OTHER)
+
+gazebo.argv = strings("--verbose","-s /orocos/gnulinux/rtt_gazebo_system/librtt_gazebo_system.so")
+
+gazebo.configure()
+
+gazebo.start()
+
+gazebo.toggleDynamicsSimulation(false)
+
+gazebo.spawn_model("coman", "model://iit-coman", 20)
+gazebo.spawn_model_at_pos( "comanb", "model://iit-coman", 1.0, 0.0, 0.0 )
+
+import("rtt-gazebo-robot-sim")
+
+loadComponent("coman","cogimon::robotSim")
+setActivity("coman",0,11,ORO_SCHED_OTHER)
+
+var string urdf_path = os.getenv("ROBOTOLOGY_ROOT") + "/robots/cogimon-gazebo-models/iit-coman/model.urdf"
+var string srdf_path = os.getenv("ROBOTOLOGY_ROOT") + "/robots/cogimon-gazebo-models/iit-coman/coman.srdf"
+coman.loadURDFAndSRDF(urdf_path, srdf_path)
+coman.getModel("coman")
+coman.configure()
+
+loadComponent("comanb","cogimon::robotSim")
+setActivity("comanb",0,11,ORO_SCHED_OTHER)
+
+comanb.loadURDFAndSRDF(urdf_path, srdf_path)
+comanb.getModel("comanb")
+comanb.configure()
+
+gazebo.toggleDynamicsSimulation(true)
+
+stream("coman.torso_JointPositionCtrl", rsb.transport.socket.scope("/torso/cmd"))
+stream("coman.left_arm_JointPositionCtrl", rsb.transport.socket.scope("/left_arm/cmd"))
+stream("coman.right_arm_JointPositionCtrl", rsb.transport.socket.scope("/right_arm/cmd"))
+stream("coman.left_leg_JointPositionCtrl", rsb.transport.socket.scope("/left_leg/cmd"))
+stream("coman.right_leg_JointPositionCtrl", rsb.transport.socket.scope("/right_leg/cmd"))
+
+stream("comanb.torso_JointPositionCtrl", rsb.transport.socket.scope("/torso/cmdb"))
+stream("comanb.left_arm_JointPositionCtrl", rsb.transport.socket.scope("/left_arm/cmdb"))
+stream("comanb.right_arm_JointPositionCtrl", rsb.transport.socket.scope("/right_arm/cmdb"))
+stream("comanb.left_leg_JointPositionCtrl", rsb.transport.socket.scope("/left_leg/cmdb"))
+stream("comanb.right_leg_JointPositionCtrl", rsb.transport.socket.scope("/right_leg/cmdb"))
+

@@ -1,0 +1,619 @@
+0.000 [ Info   ][Logger] No ORO_LOGLEVEL environment variable set.
+0.000 [ Info   ][Logger]  OROCOS version '2.7.0' compiled with GCC 4.8.4. Running in GNU/Linux.
+0.000 [ Info   ][Logger] Orocos Logging Activated at level : [ Warning] ( 4 ) 
+0.000 [ Info   ][Logger] Reference System Time is : 1471000169381435599 ticks ( 1.471e+09 seconds ).
+0.000 [ Info   ][Logger] Logging is relative to this time.
+0.000 [ Info   ][Logger] RTT_COMPONENT_PATH was set to: /home/enrico/robotology-superbuild/orocos_ws/install_isolated/lib/orocos:/opt/ros/indigo/lib/orocos:/home/enrico/robotology-superbuild/build/install/lib/orocos:/opt/ros/indigo/lib/orocos/gnulinux/plugins:/opt/ros/indigo/lib/orocos/gnulinux/types:/home/enrico/robotology-superbuild/build/external/rtt-gazebo-lwr4plus-sim/orocos . Searching in: /home/enrico/robotology-superbuild/orocos_ws/install_isolated/lib/orocos:/opt/ros/indigo/lib/orocos:/home/enrico/robotology-superbuild/build/install/lib/orocos:/opt/ros/indigo/lib/orocos/gnulinux/plugins:/opt/ros/indigo/lib/orocos/gnulinux/types:/home/enrico/robotology-superbuild/build/external/rtt-gazebo-lwr4plus-sim/orocos
+0.000 [ Info   ][Logger] plugin 'rtt' not loaded before.
+0.000 [ Info   ][Logger] Loading plugin libraries from directory /home/enrico/robotology-superbuild/orocos_ws/install_isolated/lib/orocos/gnulinux/./plugins ...
+0.000 [ Info   ][Logger] Loaded RTT Service 'scripting' from 'rtt-scripting'
+0.001 [ Info   ][Logger] Loaded RTT Service 'marshalling' from 'rtt-marshalling'
+0.001 [ Info   ][Logger] Loading plugin libraries from directory /opt/ros/indigo/lib/orocos/gnulinux/./plugins ...
+0.001 [ Info   ][Logger] typekit 'rtt' not loaded before.
+0.001 [ Info   ][Logger] Loading typekit libraries from directory /home/enrico/robotology-superbuild/orocos_ws/install_isolated/lib/orocos/gnulinux/./types ...
+0.002 [ Info   ][TypekitRepository::Import] Loading Transport mqueue://rtt-types.
+0.002 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-mqueue-transport' from 'rtt-transport-mqueue'
+0.013 [ Info   ][TypekitRepository::Import] Loading Transport CORBA://rtt-types.
+0.013 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-corba-types' from 'rtt-transport-corba'
+0.029 [ Info   ][TypekitRepository::Import] Loading Typekit rtt-types.
+0.029 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for int
+0.029 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for int
+0.029 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for uint
+0.029 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for uint
+0.029 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for double
+0.029 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for double
+0.029 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for float
+0.029 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for float
+0.029 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for char
+0.029 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for char
+0.029 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for bool
+0.029 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for bool
+0.029 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for void
+0.029 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for ConnPolicy
+0.029 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for TaskContext
+0.029 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for string
+0.029 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for array
+0.029 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for array
+0.029 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for rt_string
+0.029 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-types' from 'rtt-typekit'
+0.029 [ Info   ][Logger] Loading typekit libraries from directory /opt/ros/indigo/lib/orocos/gnulinux/./types ...
+0.029 [ Info   ][Logger] RTT_COMPONENT_PATH was set to: /home/enrico/robotology-superbuild/orocos_ws/install_isolated/lib/orocos:/opt/ros/indigo/lib/orocos:/home/enrico/robotology-superbuild/build/install/lib/orocos:/opt/ros/indigo/lib/orocos/gnulinux/plugins:/opt/ros/indigo/lib/orocos/gnulinux/types:/home/enrico/robotology-superbuild/build/external/rtt-gazebo-lwr4plus-sim/orocos . Searching in: /home/enrico/robotology-superbuild/orocos_ws/install_isolated/lib/orocos:/opt/ros/indigo/lib/orocos:/home/enrico/robotology-superbuild/build/install/lib/orocos:/opt/ros/indigo/lib/orocos/gnulinux/plugins:/opt/ros/indigo/lib/orocos/gnulinux/types:/home/enrico/robotology-superbuild/build/external/rtt-gazebo-lwr4plus-sim/orocos
+0.029 [ Info   ][Logger] OCL factory set for real-time logging
+0.029 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='Deployer'
+0.030 [ Info   ][Deployer] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 255 and period 0 (PID= 29099 ).
+0.030 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='GlobalEngine'
+0.030 [ Info   ][GlobalEngine] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 255 and period 0 (PID= 29100 ).
+0.030 [ Info   ][Logger] No site file was found. Importing 'ocl' by default.
+0.030 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/enrico/robotology-superbuild/orocos_ws/install_isolated/lib/orocos/gnulinux/ocl ...
+0.031 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::LuaTLSFComponent'
+0.036 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::logging::Log4cxxAppender'
+0.046 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/enrico/robotology-superbuild/orocos_ws/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-netcdf-gnulinux.so'
+0.046 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::NetcdfReporting'
+0.048 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/enrico/robotology-superbuild/orocos_ws/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-timer-gnulinux.so'
+0.048 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/enrico/robotology-superbuild/orocos_ws/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-gnulinux.so'
+0.049 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/enrico/robotology-superbuild/orocos_ws/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-common-gnulinux.so'
+0.050 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::LuaComponent'
+0.051 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::HelloWorld'
+0.052 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/enrico/robotology-superbuild/orocos_ws/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-logging-gnulinux.so'
+0.052 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /home/enrico/robotology-superbuild/orocos_ws/install_isolated/lib/orocos/gnulinux/ocl/types ...
+0.056 [ Info   ][TypekitRepository::Import] Loading Typekit OCLTypekit.
+0.056 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'OCLTypekit' from 'ocl'
+0.056 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/enrico/robotology-superbuild/orocos_ws/install_isolated/lib/orocos/gnulinux/ocl/plugins ...
+0.057 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'LuaTLSF' from 'rttlua-tlsf-plugin'
+0.058 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'print' from 'print'
+0.058 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'Lua' from 'rttlua-plugin'
+0.059 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'os' from 'os'
+0.059 [ Info   ][Logger] Loading Service or Plugin scripting in TaskContext Deployer
+0.060 [ Info   ][Logger] Found complete interface of requested service 'scripting'
+0.060 [ Info   ][Logger] Running Script 2comans_bring_up.ops ...
+0.061 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/enrico/robotology-superbuild/orocos_ws/install_isolated/lib/orocos/gnulinux/eigen_typekit ...
+0.061 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /home/enrico/robotology-superbuild/orocos_ws/install_isolated/lib/orocos/gnulinux/eigen_typekit/types ...
+0.068 [ Info   ][TypekitRepository::Import] Loading Typekit Eigen.
+0.068 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'Eigen' from 'eigen_typekit'
+0.068 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/enrico/robotology-superbuild/orocos_ws/install_isolated/lib/orocos/gnulinux/kdl_typekit ...
+0.082 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'KDLTypekitTestComponent'
+0.082 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /home/enrico/robotology-superbuild/orocos_ws/install_isolated/lib/orocos/gnulinux/kdl_typekit/types ...
+0.084 [ Info   ][TypekitRepository::Import] Loading Transport CORBA://KDL.
+0.084 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'kdl-corba-types' from 'kdl-transport-corba'
+0.155 [ Info   ][TypekitRepository::Import] Loading Typekit KDL.
+0.155 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for KDL.Frame
+0.156 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for KDL.Rotation
+0.156 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for KDL.Twist
+0.156 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for KDL.Vector
+0.156 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for KDL.Wrench
+0.156 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'KDL' from 'kdl_typekit'
+0.157 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/enrico/robotology-superbuild/build/install/lib/orocos/gnulinux/rst-rt_typekit ...
+0.157 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /home/enrico/robotology-superbuild/build/install/lib/orocos/gnulinux/rst-rt_typekit/types ...
+0.201 [ Info   ][TypekitRepository::Import] Loading Typekit rrct.
+0.201 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'rrct' from 'rst-rt_typekit'
+0.202 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/enrico/robotology-superbuild/build/install/lib/orocos/gnulinux/rtt_rsbcomm ...
+0.202 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /home/enrico/robotology-superbuild/build/install/lib/orocos/gnulinux/rtt_rsbcomm/types ...
+0.240 [ Info   ][TypekitRepository::Import] Loading Transport rsb+socket://rsb.
+0.240 [ Info   ][TypekitRepository::Import] Registered new 'rsb+socket' transport for bool
+0.240 [ Info   ][TypekitRepository::Import] Registered new 'rsb+socket' transport for char
+0.240 [ Info   ][TypekitRepository::Import] Registered new 'rsb+socket' transport for double
+0.240 [ Info   ][TypekitRepository::Import] Registered new 'rsb+socket' transport for float
+0.240 [ Info   ][TypekitRepository::Import] Registered new 'rsb+socket' transport for int
+0.240 [ Info   ][TypekitRepository::Import] Registered new 'rsb+socket' transport for rstrt.dynamics.JointImpedance
+0.240 [ Info   ][TypekitRepository::Import] Registered new 'rsb+socket' transport for rstrt.dynamics.JointTorques
+0.240 [ Info   ][TypekitRepository::Import] Registered new 'rsb+socket' transport for rstrt.geometry.Translation
+0.240 [ Info   ][TypekitRepository::Import] Registered new 'rsb+socket' transport for rstrt.kinematics.JointAccelerations
+0.240 [ Info   ][TypekitRepository::Import] Registered new 'rsb+socket' transport for rstrt.kinematics.JointAngles
+0.240 [ Info   ][TypekitRepository::Import] Registered new 'rsb+socket' transport for rstrt.kinematics.JointVelocities
+0.240 [ Info   ][TypekitRepository::Import] Registered new 'rsb+socket' transport for rstrt.robot.JointState
+0.240 [ Info   ][TypekitRepository::Import] Registered new 'rsb+socket' transport for string
+0.240 [ Info   ][TypekitRepository::Import] Registered new 'rsb+socket' transport for uint
+0.240 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'rtt-rsb-socket-transport' from 'rtt-rsb-socket-transport'
+0.240 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/enrico/robotology-superbuild/build/install/lib/orocos/gnulinux/rtt_rsbcomm/plugins ...
+0.242 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Plugin 'rtt-rsb-scope-service' from 'rtt-rsb-scope-service'
+0.242 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/enrico/robotology-superbuild/build/install/lib/orocos/gnulinux/rtt_gazebo_embedded ...
+0.352 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'RTTGazeboEmbedded'
+0.354 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'ModelPluginExample'
+0.355 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='gazebo'
+0.355 [ Info   ][gazebo] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 255 and period 0 (PID= 29102 ).
+0.355 [ Info   ][loadComponent] Creating gazebo with gazebo embedded !
+0.355 [ Info   ][loadComponent] Adding gazebo as new peer:  OK.
+0.356 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=10, CPU affinity=4294967295, with name='gazebo'
+0.356 [ Warning][Thread] Forcing priority (10) of thread with SCHED_OTHER policy to 0.
+0.356 [ Info   ][gazebo] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 255 and period 0 (PID= 29103 ).
+0.357 [ Info   ][ScriptingService] Creating world at worlds/empty.world
+2.015 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/enrico/robotology-superbuild/build/install/lib/orocos/gnulinux/rtt-gazebo-robot-sim ...
+2.017 [ ERROR  ][ComponentLoader::import(path_list)] Unloading /home/enrico/robotology-superbuild/build/install/lib/orocos/gnulinux/rtt-gazebo-robot-sim/libgain_parser-gnulinux.so: not a valid component library:
+2.017 [ ERROR  ][ComponentLoader::import(path_list)]    /home/enrico/robotology-superbuild/build/install/lib/orocos/gnulinux/rtt-gazebo-robot-sim/libgain_parser-gnulinux.so: undefined symbol: createComponent
+2.017 [ ERROR  ][ComponentLoader::import(path_list)]    /home/enrico/robotology-superbuild/build/install/lib/orocos/gnulinux/rtt-gazebo-robot-sim/libgain_parser-gnulinux.so: undefined symbol: getComponentType
+2.098 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/enrico/robotology-superbuild/build/install/lib/orocos/gnulinux/rtt-gazebo-robot-sim/librtt-gazebo-robot-sim-gnulinux.so'
+2.098 [ ERROR  ][ScriptingService] Exception raised while executing an operation : Some found plugins could not be loaded !
+2.098 [ ERROR  ][ScriptingService] in Deployer: unhandled exception in sent operation.
+2.099 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='coman'
+2.099 [ Info   ][coman] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 255 and period 0 (PID= 29126 ).
+2.099 [ Info   ][loadComponent] Adding coman as new peer:  OK.
+2.100 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=11, CPU affinity=4294967295, with name='coman'
+2.100 [ Warning][Thread] Forcing priority (11) of thread with SCHED_OTHER policy to 0.
+2.100 [ Info   ][coman] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 255 and period 0 (PID= 29127 ).
+2.101 [ Info   ][ScriptingService] URDF path: /home/enrico/robotology-superbuild/robots/cogimon-gazebo-models/iit-coman/model.urdf
+2.101 [ Info   ][ScriptingService] SRDF path: /home/enrico/robotology-superbuild/robots/cogimon-gazebo-models/iit-coman/coman.srdf
+2.110 [ Info   ][ScriptingService] chain #0 left_arm
+2.110 [ Info   ][ScriptingService]   LShSag
+2.110 [ Info   ][ScriptingService]   LShLat
+2.110 [ Info   ][ScriptingService]   LShYaw
+2.110 [ Info   ][ScriptingService]   LElbj
+2.110 [ Info   ][ScriptingService]   LForearmPlate
+2.110 [ Info   ][ScriptingService]   LWrj1
+2.110 [ Info   ][ScriptingService]   LWrj2
+2.110 [ Info   ][ScriptingService] chain #1 right_arm
+2.110 [ Info   ][ScriptingService]   RShSag
+2.110 [ Info   ][ScriptingService]   RShLat
+2.110 [ Info   ][ScriptingService]   RShYaw
+2.110 [ Info   ][ScriptingService]   RElbj
+2.110 [ Info   ][ScriptingService]   RForearmPlate
+2.110 [ Info   ][ScriptingService]   RWrj1
+2.110 [ Info   ][ScriptingService]   RWrj2
+2.110 [ Info   ][ScriptingService] chain #2 left_leg
+2.110 [ Info   ][ScriptingService]   LHipSag
+2.110 [ Info   ][ScriptingService]   LHipLat
+2.110 [ Info   ][ScriptingService]   LHipYaw
+2.110 [ Info   ][ScriptingService]   LKneeSag
+2.110 [ Info   ][ScriptingService]   LAnkLat
+2.110 [ Info   ][ScriptingService]   LAnkSag
+2.110 [ Info   ][ScriptingService] chain #3 right_leg
+2.110 [ Info   ][ScriptingService]   RHipSag
+2.111 [ Info   ][ScriptingService]   RHipLat
+2.111 [ Info   ][ScriptingService]   RHipYaw
+2.111 [ Info   ][ScriptingService]   RKneeSag
+2.111 [ Info   ][ScriptingService]   RAnkLat
+2.111 [ Info   ][ScriptingService]   RAnkSag
+2.111 [ Info   ][ScriptingService] chain #4 torso
+2.111 [ Info   ][ScriptingService]   WaistLat
+2.111 [ Info   ][ScriptingService]   WaistSag
+2.111 [ Info   ][ScriptingService]   WaistYaw
+2.111 [ Info   ][ScriptingService] Model [coman] successfully loaded !
+2.111 [ Info   ][ScriptingService] Model name coman
+2.111 [ Info   ][ScriptingService] Model has 29 joints
+2.111 [ Info   ][ScriptingService] Model has 30 links
+2.111 [ Info   ][ScriptingService] Creating Kinematic Chain left_arm
+2.111 [ Info   ][ScriptingService] Joints: 
+2.111 [ Info   ][ScriptingService]     LShSag
+2.111 [ Info   ][ScriptingService]     LShLat
+2.111 [ Info   ][ScriptingService]     LShYaw
+2.111 [ Info   ][ScriptingService]     LElbj
+2.111 [ Info   ][ScriptingService]     LForearmPlate
+2.111 [ Info   ][ScriptingService]     LWrj1
+2.111 [ Info   ][ScriptingService]     LWrj2
+2.111 [ Info   ][ScriptingService] Creating Kinematic Chain right_arm
+2.111 [ Info   ][ScriptingService] Joints: 
+2.111 [ Info   ][ScriptingService]     RShSag
+2.111 [ Info   ][ScriptingService]     RShLat
+2.111 [ Info   ][ScriptingService]     RShYaw
+2.111 [ Info   ][ScriptingService]     RElbj
+2.111 [ Info   ][ScriptingService]     RForearmPlate
+2.111 [ Info   ][ScriptingService]     RWrj1
+2.111 [ Info   ][ScriptingService]     RWrj2
+2.111 [ Info   ][ScriptingService] Creating Kinematic Chain left_leg
+2.111 [ Info   ][ScriptingService] Joints: 
+2.111 [ Info   ][ScriptingService]     LHipSag
+2.111 [ Info   ][ScriptingService]     LHipLat
+2.111 [ Info   ][ScriptingService]     LHipYaw
+2.111 [ Info   ][ScriptingService]     LKneeSag
+2.111 [ Info   ][ScriptingService]     LAnkLat
+2.111 [ Info   ][ScriptingService]     LAnkSag
+2.111 [ Info   ][ScriptingService] Creating Kinematic Chain right_leg
+2.111 [ Info   ][ScriptingService] Joints: 
+2.111 [ Info   ][ScriptingService]     RHipSag
+2.111 [ Info   ][ScriptingService]     RHipLat
+2.111 [ Info   ][ScriptingService]     RHipYaw
+2.111 [ Info   ][ScriptingService]     RKneeSag
+2.111 [ Info   ][ScriptingService]     RAnkLat
+2.111 [ Info   ][ScriptingService]     RAnkSag
+2.111 [ Info   ][ScriptingService] Creating Kinematic Chain torso
+2.111 [ Info   ][ScriptingService] Joints: 
+2.111 [ Info   ][ScriptingService]     WaistLat
+2.111 [ Info   ][ScriptingService]     WaistSag
+2.111 [ Info   ][ScriptingService]     WaistYaw
+2.111 [ Info   ][ScriptingService] Kinematic Chains map created!
+2.112 [ Info   ][ScriptingService] Available controllers for left_arm are:
+2.112 [ Info   ][ScriptingService]   JointPositionCtrl
+2.112 [ Info   ][ScriptingService]   JointImpedanceCtrl
+2.112 [ Info   ][ScriptingService]   JointTorqueCtrl
+2.112 [ Info   ][ScriptingService] Joint LElbj in chain left_arm has scoped name coman::LElbj
+2.112 [ Info   ][ScriptingService] Joint LForearmPlate in chain left_arm has scoped name coman::LForearmPlate
+2.112 [ Info   ][ScriptingService] Joint LShLat in chain left_arm has scoped name coman::LShLat
+2.112 [ Info   ][ScriptingService] Joint LShSag in chain left_arm has scoped name coman::LShSag
+2.112 [ Info   ][ScriptingService] Joint LShYaw in chain left_arm has scoped name coman::LShYaw
+2.112 [ Info   ][ScriptingService] Joint LWrj1 in chain left_arm has scoped name coman::LWrj1
+2.112 [ Info   ][ScriptingService] Joint LWrj2 in chain left_arm has scoped name coman::LWrj2
+2.112 [ Info   ][ScriptingService] JointPositionCtrl activated!
+2.112 [ Info   ][ScriptingService] JointImpedanceCtrl activated!
+2.112 [ Info   ][ScriptingService] JointTorqueCtrl activated!
+2.112 [ Info   ][ScriptingService] Full feedback activated!
+2.112 [ Info   ][ScriptingService] left_arm PIDs:
+2.112 [ Info   ][ScriptingService]   LShSag P: 1000 I: 0 D: 0.1
+2.112 [ Info   ][ScriptingService]   LShLat P: 1000 I: 0 D: 0.1
+2.112 [ Info   ][ScriptingService]   LShYaw P: 600 I: 0 D: 0.1
+2.112 [ Info   ][ScriptingService]   LElbj P: 1000 I: 0 D: 0.1
+2.112 [ Info   ][ScriptingService]   LForearmPlate P: 100 I: 0 D: 0.1
+2.112 [ Info   ][ScriptingService]   LWrj1 P: 100 I: 0 D: 0.1
+2.112 [ Info   ][ScriptingService]   LWrj2 P: 10 I: 0 D: 0.01
+2.112 [ Info   ][ScriptingService] Gazebo Joint Controlled inited!
+2.112 [ Info   ][ScriptingService] Initial Position set!
+2.112 [ Info   ][ScriptingService] left_arm impedance:
+2.112 [ Info   ][ScriptingService]   LShSag stiffness: 300 damping: 30
+2.112 [ Info   ][ScriptingService]   LShLat stiffness: 300 damping: 30
+2.112 [ Info   ][ScriptingService]   LShYaw stiffness: 300 damping: 30
+2.112 [ Info   ][ScriptingService]   LElbj stiffness: 300 damping: 30
+2.112 [ Info   ][ScriptingService]   LForearmPlate stiffness: 300 damping: 30
+2.112 [ Info   ][ScriptingService]   LWrj1 stiffness: 300 damping: 30
+2.112 [ Info   ][ScriptingService]   LWrj2 stiffness: 300 damping: 30
+2.112 [ Info   ][ScriptingService] Initial Impedance set!
+2.112 [ Info   ][ScriptingService] Available controllers for left_leg are:
+2.112 [ Info   ][ScriptingService]   JointPositionCtrl
+2.112 [ Info   ][ScriptingService]   JointImpedanceCtrl
+2.112 [ Info   ][ScriptingService]   JointTorqueCtrl
+2.112 [ Info   ][ScriptingService] Joint LAnkLat in chain left_leg has scoped name coman::LAnkLat
+2.112 [ Info   ][ScriptingService] Joint LAnkSag in chain left_leg has scoped name coman::LAnkSag
+2.112 [ Info   ][ScriptingService] Joint LHipLat in chain left_leg has scoped name coman::LHipLat
+2.112 [ Info   ][ScriptingService] Joint LHipSag in chain left_leg has scoped name coman::LHipSag
+2.112 [ Info   ][ScriptingService] Joint LHipYaw in chain left_leg has scoped name coman::LHipYaw
+2.113 [ Info   ][ScriptingService] Joint LKneeSag in chain left_leg has scoped name coman::LKneeSag
+2.113 [ Info   ][ScriptingService] JointPositionCtrl activated!
+2.113 [ Info   ][ScriptingService] JointImpedanceCtrl activated!
+2.113 [ Info   ][ScriptingService] JointTorqueCtrl activated!
+2.113 [ Info   ][ScriptingService] Full feedback activated!
+2.113 [ Info   ][ScriptingService] left_leg PIDs:
+2.113 [ Info   ][ScriptingService]   LHipSag P: 3000 I: 0 D: 0.1
+2.113 [ Info   ][ScriptingService]   LHipLat P: 5000 I: 0 D: 0.1
+2.113 [ Info   ][ScriptingService]   LHipYaw P: 3000 I: 0 D: 0.1
+2.113 [ Info   ][ScriptingService]   LKneeSag P: 3000 I: 0 D: 0.1
+2.113 [ Info   ][ScriptingService]   LAnkLat P: 4000 I: 0 D: 0.1
+2.113 [ Info   ][ScriptingService]   LAnkSag P: 3000 I: 0 D: 1
+2.113 [ Info   ][ScriptingService] Gazebo Joint Controlled inited!
+2.113 [ Info   ][ScriptingService] Initial Position set!
+2.113 [ Info   ][ScriptingService] left_leg impedance:
+2.113 [ Info   ][ScriptingService]   LHipSag stiffness: 300 damping: 30
+2.113 [ Info   ][ScriptingService]   LHipLat stiffness: 300 damping: 30
+2.113 [ Info   ][ScriptingService]   LHipYaw stiffness: 300 damping: 30
+2.113 [ Info   ][ScriptingService]   LKneeSag stiffness: 300 damping: 30
+2.113 [ Info   ][ScriptingService]   LAnkLat stiffness: 300 damping: 30
+2.113 [ Info   ][ScriptingService]   LAnkSag stiffness: 300 damping: 30
+2.113 [ Info   ][ScriptingService] Initial Impedance set!
+2.113 [ Info   ][ScriptingService] Available controllers for right_arm are:
+2.113 [ Info   ][ScriptingService]   JointPositionCtrl
+2.113 [ Info   ][ScriptingService]   JointImpedanceCtrl
+2.113 [ Info   ][ScriptingService]   JointTorqueCtrl
+2.113 [ Info   ][ScriptingService] Joint RElbj in chain right_arm has scoped name coman::RElbj
+2.113 [ Info   ][ScriptingService] Joint RForearmPlate in chain right_arm has scoped name coman::RForearmPlate
+2.113 [ Info   ][ScriptingService] Joint RShLat in chain right_arm has scoped name coman::RShLat
+2.113 [ Info   ][ScriptingService] Joint RShSag in chain right_arm has scoped name coman::RShSag
+2.113 [ Info   ][ScriptingService] Joint RShYaw in chain right_arm has scoped name coman::RShYaw
+2.113 [ Info   ][ScriptingService] Joint RWrj1 in chain right_arm has scoped name coman::RWrj1
+2.113 [ Info   ][ScriptingService] Joint RWrj2 in chain right_arm has scoped name coman::RWrj2
+2.113 [ Info   ][ScriptingService] JointPositionCtrl activated!
+2.113 [ Info   ][ScriptingService] JointImpedanceCtrl activated!
+2.113 [ Info   ][ScriptingService] JointTorqueCtrl activated!
+2.113 [ Info   ][ScriptingService] Full feedback activated!
+2.113 [ Info   ][ScriptingService] right_arm PIDs:
+2.113 [ Info   ][ScriptingService]   RShSag P: 1000 I: 0 D: 0.1
+2.113 [ Info   ][ScriptingService]   RShLat P: 1000 I: 0 D: 0.1
+2.113 [ Info   ][ScriptingService]   RShYaw P: 600 I: 0 D: 0.1
+2.113 [ Info   ][ScriptingService]   RElbj P: 1000 I: 0 D: 0.1
+2.113 [ Info   ][ScriptingService]   RForearmPlate P: 100 I: 0 D: 0.1
+2.113 [ Info   ][ScriptingService]   RWrj1 P: 100 I: 0 D: 0.1
+2.113 [ Info   ][ScriptingService]   RWrj2 P: 10 I: 0 D: 0.01
+2.113 [ Info   ][ScriptingService] Gazebo Joint Controlled inited!
+2.113 [ Info   ][ScriptingService] Initial Position set!
+2.114 [ Info   ][ScriptingService] right_arm impedance:
+2.114 [ Info   ][ScriptingService]   RShSag stiffness: 300 damping: 30
+2.114 [ Info   ][ScriptingService]   RShLat stiffness: 300 damping: 30
+2.114 [ Info   ][ScriptingService]   RShYaw stiffness: 300 damping: 30
+2.114 [ Info   ][ScriptingService]   RElbj stiffness: 300 damping: 30
+2.114 [ Info   ][ScriptingService]   RForearmPlate stiffness: 300 damping: 30
+2.114 [ Info   ][ScriptingService]   RWrj1 stiffness: 300 damping: 30
+2.114 [ Info   ][ScriptingService]   RWrj2 stiffness: 300 damping: 30
+2.114 [ Info   ][ScriptingService] Initial Impedance set!
+2.114 [ Info   ][ScriptingService] Available controllers for right_leg are:
+2.114 [ Info   ][ScriptingService]   JointPositionCtrl
+2.114 [ Info   ][ScriptingService]   JointImpedanceCtrl
+2.114 [ Info   ][ScriptingService]   JointTorqueCtrl
+2.114 [ Info   ][ScriptingService] Joint RAnkLat in chain right_leg has scoped name coman::RAnkLat
+2.114 [ Info   ][ScriptingService] Joint RAnkSag in chain right_leg has scoped name coman::RAnkSag
+2.114 [ Info   ][ScriptingService] Joint RHipLat in chain right_leg has scoped name coman::RHipLat
+2.114 [ Info   ][ScriptingService] Joint RHipSag in chain right_leg has scoped name coman::RHipSag
+2.114 [ Info   ][ScriptingService] Joint RHipYaw in chain right_leg has scoped name coman::RHipYaw
+2.114 [ Info   ][ScriptingService] Joint RKneeSag in chain right_leg has scoped name coman::RKneeSag
+2.114 [ Info   ][ScriptingService] JointPositionCtrl activated!
+2.114 [ Info   ][ScriptingService] JointImpedanceCtrl activated!
+2.114 [ Info   ][ScriptingService] JointTorqueCtrl activated!
+2.114 [ Info   ][ScriptingService] Full feedback activated!
+2.114 [ Info   ][ScriptingService] right_leg PIDs:
+2.114 [ Info   ][ScriptingService]   RHipSag P: 3000 I: 0 D: 0.1
+2.114 [ Info   ][ScriptingService]   RHipLat P: 5000 I: 0 D: 0.1
+2.114 [ Info   ][ScriptingService]   RHipYaw P: 3000 I: 0 D: 0.1
+2.114 [ Info   ][ScriptingService]   RKneeSag P: 3000 I: 0 D: 0.1
+2.114 [ Info   ][ScriptingService]   RAnkLat P: 4000 I: 0 D: 0.1
+2.114 [ Info   ][ScriptingService]   RAnkSag P: 3000 I: 0 D: 1
+2.114 [ Info   ][ScriptingService] Gazebo Joint Controlled inited!
+2.114 [ Info   ][ScriptingService] Initial Position set!
+2.114 [ Info   ][ScriptingService] right_leg impedance:
+2.114 [ Info   ][ScriptingService]   RHipSag stiffness: 300 damping: 30
+2.114 [ Info   ][ScriptingService]   RHipLat stiffness: 300 damping: 30
+2.114 [ Info   ][ScriptingService]   RHipYaw stiffness: 300 damping: 30
+2.114 [ Info   ][ScriptingService]   RKneeSag stiffness: 300 damping: 30
+2.114 [ Info   ][ScriptingService]   RAnkLat stiffness: 300 damping: 30
+2.114 [ Info   ][ScriptingService]   RAnkSag stiffness: 300 damping: 30
+2.114 [ Info   ][ScriptingService] Initial Impedance set!
+2.114 [ Info   ][ScriptingService] Available controllers for torso are:
+2.114 [ Info   ][ScriptingService]   JointPositionCtrl
+2.114 [ Info   ][ScriptingService]   JointImpedanceCtrl
+2.114 [ Info   ][ScriptingService]   JointTorqueCtrl
+2.114 [ Info   ][ScriptingService] Joint WaistLat in chain torso has scoped name coman::WaistLat
+2.114 [ Info   ][ScriptingService] Joint WaistSag in chain torso has scoped name coman::WaistSag
+2.114 [ Info   ][ScriptingService] Joint WaistYaw in chain torso has scoped name coman::WaistYaw
+2.114 [ Info   ][ScriptingService] JointPositionCtrl activated!
+2.114 [ Info   ][ScriptingService] JointImpedanceCtrl activated!
+2.114 [ Info   ][ScriptingService] JointTorqueCtrl activated!
+2.114 [ Info   ][ScriptingService] Full feedback activated!
+2.114 [ Info   ][ScriptingService] torso PIDs:
+2.114 [ Info   ][ScriptingService]   WaistLat P: 1000 I: 0 D: 0.1
+2.114 [ Info   ][ScriptingService]   WaistSag P: 1000 I: 0 D: 0.1
+2.114 [ Info   ][ScriptingService]   WaistYaw P: 1000 I: 0 D: 0.1
+2.114 [ Info   ][ScriptingService] Gazebo Joint Controlled inited!
+2.114 [ Info   ][ScriptingService] Initial Position set!
+2.114 [ Info   ][ScriptingService] torso impedance:
+2.115 [ Info   ][ScriptingService]   WaistLat stiffness: 300 damping: 30
+2.115 [ Info   ][ScriptingService]   WaistSag stiffness: 300 damping: 30
+2.115 [ Info   ][ScriptingService]   WaistYaw stiffness: 300 damping: 30
+2.115 [ Info   ][ScriptingService] Initial Impedance set!
+2.115 [ Info   ][ScriptingService] Kinematic Chains Initialized!
+2.115 [ Warning][ScriptingService] Done configuring component
+2.115 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='comanb'
+2.115 [ Info   ][comanb] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 255 and period 0 (PID= 29128 ).
+2.115 [ Info   ][loadComponent] Adding comanb as new peer:  OK.
+2.115 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=11, CPU affinity=4294967295, with name='comanb'
+2.115 [ Warning][Thread] Forcing priority (11) of thread with SCHED_OTHER policy to 0.
+2.116 [ Info   ][comanb] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 255 and period 0 (PID= 29129 ).
+2.116 [ Info   ][ScriptingService] URDF path: /home/enrico/robotology-superbuild/robots/cogimon-gazebo-models/iit-coman/model.urdf
+2.116 [ Info   ][ScriptingService] SRDF path: /home/enrico/robotology-superbuild/robots/cogimon-gazebo-models/iit-coman/coman.srdf
+2.125 [ Info   ][ScriptingService] chain #0 left_arm
+2.125 [ Info   ][ScriptingService]   LShSag
+2.125 [ Info   ][ScriptingService]   LShLat
+2.125 [ Info   ][ScriptingService]   LShYaw
+2.125 [ Info   ][ScriptingService]   LElbj
+2.125 [ Info   ][ScriptingService]   LForearmPlate
+2.125 [ Info   ][ScriptingService]   LWrj1
+2.125 [ Info   ][ScriptingService]   LWrj2
+2.125 [ Info   ][ScriptingService] chain #1 right_arm
+2.125 [ Info   ][ScriptingService]   RShSag
+2.125 [ Info   ][ScriptingService]   RShLat
+2.125 [ Info   ][ScriptingService]   RShYaw
+2.125 [ Info   ][ScriptingService]   RElbj
+2.125 [ Info   ][ScriptingService]   RForearmPlate
+2.125 [ Info   ][ScriptingService]   RWrj1
+2.125 [ Info   ][ScriptingService]   RWrj2
+2.125 [ Info   ][ScriptingService] chain #2 left_leg
+2.125 [ Info   ][ScriptingService]   LHipSag
+2.125 [ Info   ][ScriptingService]   LHipLat
+2.125 [ Info   ][ScriptingService]   LHipYaw
+2.125 [ Info   ][ScriptingService]   LKneeSag
+2.125 [ Info   ][ScriptingService]   LAnkLat
+2.125 [ Info   ][ScriptingService]   LAnkSag
+2.125 [ Info   ][ScriptingService] chain #3 right_leg
+2.125 [ Info   ][ScriptingService]   RHipSag
+2.125 [ Info   ][ScriptingService]   RHipLat
+2.125 [ Info   ][ScriptingService]   RHipYaw
+2.125 [ Info   ][ScriptingService]   RKneeSag
+2.125 [ Info   ][ScriptingService]   RAnkLat
+2.125 [ Info   ][ScriptingService]   RAnkSag
+2.125 [ Info   ][ScriptingService] chain #4 torso
+2.125 [ Info   ][ScriptingService]   WaistLat
+2.125 [ Info   ][ScriptingService]   WaistSag
+2.125 [ Info   ][ScriptingService]   WaistYaw
+2.126 [ Info   ][ScriptingService] Model [comanb] successfully loaded !
+2.126 [ Info   ][ScriptingService] Model name comanb
+2.126 [ Info   ][ScriptingService] Model has 29 joints
+2.126 [ Info   ][ScriptingService] Model has 30 links
+2.126 [ Info   ][ScriptingService] Creating Kinematic Chain left_arm
+2.126 [ Info   ][ScriptingService] Joints: 
+2.126 [ Info   ][ScriptingService]     LShSag
+2.126 [ Info   ][ScriptingService]     LShLat
+2.126 [ Info   ][ScriptingService]     LShYaw
+2.126 [ Info   ][ScriptingService]     LElbj
+2.126 [ Info   ][ScriptingService]     LForearmPlate
+2.126 [ Info   ][ScriptingService]     LWrj1
+2.126 [ Info   ][ScriptingService]     LWrj2
+2.126 [ Info   ][ScriptingService] Creating Kinematic Chain right_arm
+2.126 [ Info   ][ScriptingService] Joints: 
+2.126 [ Info   ][ScriptingService]     RShSag
+2.126 [ Info   ][ScriptingService]     RShLat
+2.126 [ Info   ][ScriptingService]     RShYaw
+2.126 [ Info   ][ScriptingService]     RElbj
+2.126 [ Info   ][ScriptingService]     RForearmPlate
+2.126 [ Info   ][ScriptingService]     RWrj1
+2.126 [ Info   ][ScriptingService]     RWrj2
+2.126 [ Info   ][ScriptingService] Creating Kinematic Chain left_leg
+2.126 [ Info   ][ScriptingService] Joints: 
+2.126 [ Info   ][ScriptingService]     LHipSag
+2.126 [ Info   ][ScriptingService]     LHipLat
+2.126 [ Info   ][ScriptingService]     LHipYaw
+2.126 [ Info   ][ScriptingService]     LKneeSag
+2.126 [ Info   ][ScriptingService]     LAnkLat
+2.126 [ Info   ][ScriptingService]     LAnkSag
+2.126 [ Info   ][ScriptingService] Creating Kinematic Chain right_leg
+2.126 [ Info   ][ScriptingService] Joints: 
+2.126 [ Info   ][ScriptingService]     RHipSag
+2.126 [ Info   ][ScriptingService]     RHipLat
+2.126 [ Info   ][ScriptingService]     RHipYaw
+2.126 [ Info   ][ScriptingService]     RKneeSag
+2.126 [ Info   ][ScriptingService]     RAnkLat
+2.126 [ Info   ][ScriptingService]     RAnkSag
+2.126 [ Info   ][ScriptingService] Creating Kinematic Chain torso
+2.126 [ Info   ][ScriptingService] Joints: 
+2.126 [ Info   ][ScriptingService]     WaistLat
+2.126 [ Info   ][ScriptingService]     WaistSag
+2.126 [ Info   ][ScriptingService]     WaistYaw
+2.126 [ Info   ][ScriptingService] Kinematic Chains map created!
+2.126 [ Info   ][ScriptingService] Available controllers for left_arm are:
+2.126 [ Info   ][ScriptingService]   JointPositionCtrl
+2.126 [ Info   ][ScriptingService]   JointImpedanceCtrl
+2.126 [ Info   ][ScriptingService]   JointTorqueCtrl
+2.126 [ Info   ][ScriptingService] Joint LElbj in chain left_arm has scoped name comanb::LElbj
+2.126 [ Info   ][ScriptingService] Joint LForearmPlate in chain left_arm has scoped name comanb::LForearmPlate
+2.126 [ Info   ][ScriptingService] Joint LShLat in chain left_arm has scoped name comanb::LShLat
+2.126 [ Info   ][ScriptingService] Joint LShSag in chain left_arm has scoped name comanb::LShSag
+2.126 [ Info   ][ScriptingService] Joint LShYaw in chain left_arm has scoped name comanb::LShYaw
+2.126 [ Info   ][ScriptingService] Joint LWrj1 in chain left_arm has scoped name comanb::LWrj1
+2.127 [ Info   ][ScriptingService] Joint LWrj2 in chain left_arm has scoped name comanb::LWrj2
+2.127 [ Info   ][ScriptingService] JointPositionCtrl activated!
+2.127 [ Info   ][ScriptingService] JointImpedanceCtrl activated!
+2.127 [ Info   ][ScriptingService] JointTorqueCtrl activated!
+2.127 [ Info   ][ScriptingService] Full feedback activated!
+2.127 [ Info   ][ScriptingService] left_arm PIDs:
+2.127 [ Info   ][ScriptingService]   LShSag P: 1000 I: 0 D: 0.1
+2.127 [ Info   ][ScriptingService]   LShLat P: 1000 I: 0 D: 0.1
+2.127 [ Info   ][ScriptingService]   LShYaw P: 600 I: 0 D: 0.1
+2.127 [ Info   ][ScriptingService]   LElbj P: 1000 I: 0 D: 0.1
+2.127 [ Info   ][ScriptingService]   LForearmPlate P: 100 I: 0 D: 0.1
+2.127 [ Info   ][ScriptingService]   LWrj1 P: 100 I: 0 D: 0.1
+2.127 [ Info   ][ScriptingService]   LWrj2 P: 10 I: 0 D: 0.01
+2.127 [ Info   ][ScriptingService] Gazebo Joint Controlled inited!
+2.127 [ Info   ][ScriptingService] Initial Position set!
+2.127 [ Info   ][ScriptingService] left_arm impedance:
+2.127 [ Info   ][ScriptingService]   LShSag stiffness: 300 damping: 30
+2.127 [ Info   ][ScriptingService]   LShLat stiffness: 300 damping: 30
+2.127 [ Info   ][ScriptingService]   LShYaw stiffness: 300 damping: 30
+2.127 [ Info   ][ScriptingService]   LElbj stiffness: 300 damping: 30
+2.127 [ Info   ][ScriptingService]   LForearmPlate stiffness: 300 damping: 30
+2.127 [ Info   ][ScriptingService]   LWrj1 stiffness: 300 damping: 30
+2.127 [ Info   ][ScriptingService]   LWrj2 stiffness: 300 damping: 30
+2.127 [ Info   ][ScriptingService] Initial Impedance set!
+2.127 [ Info   ][ScriptingService] Available controllers for left_leg are:
+2.127 [ Info   ][ScriptingService]   JointPositionCtrl
+2.127 [ Info   ][ScriptingService]   JointImpedanceCtrl
+2.127 [ Info   ][ScriptingService]   JointTorqueCtrl
+2.127 [ Info   ][ScriptingService] Joint LAnkLat in chain left_leg has scoped name comanb::LAnkLat
+2.127 [ Info   ][ScriptingService] Joint LAnkSag in chain left_leg has scoped name comanb::LAnkSag
+2.127 [ Info   ][ScriptingService] Joint LHipLat in chain left_leg has scoped name comanb::LHipLat
+2.127 [ Info   ][ScriptingService] Joint LHipSag in chain left_leg has scoped name comanb::LHipSag
+2.127 [ Info   ][ScriptingService] Joint LHipYaw in chain left_leg has scoped name comanb::LHipYaw
+2.127 [ Info   ][ScriptingService] Joint LKneeSag in chain left_leg has scoped name comanb::LKneeSag
+2.127 [ Info   ][ScriptingService] JointPositionCtrl activated!
+2.127 [ Info   ][ScriptingService] JointImpedanceCtrl activated!
+2.127 [ Info   ][ScriptingService] JointTorqueCtrl activated!
+2.128 [ Info   ][ScriptingService] Full feedback activated!
+2.128 [ Info   ][ScriptingService] left_leg PIDs:
+2.128 [ Info   ][ScriptingService]   LHipSag P: 3000 I: 0 D: 0.1
+2.128 [ Info   ][ScriptingService]   LHipLat P: 5000 I: 0 D: 0.1
+2.128 [ Info   ][ScriptingService]   LHipYaw P: 3000 I: 0 D: 0.1
+2.128 [ Info   ][ScriptingService]   LKneeSag P: 3000 I: 0 D: 0.1
+2.128 [ Info   ][ScriptingService]   LAnkLat P: 4000 I: 0 D: 0.1
+2.128 [ Info   ][ScriptingService]   LAnkSag P: 3000 I: 0 D: 1
+2.128 [ Info   ][ScriptingService] Gazebo Joint Controlled inited!
+2.128 [ Info   ][ScriptingService] Initial Position set!
+2.128 [ Info   ][ScriptingService] left_leg impedance:
+2.128 [ Info   ][ScriptingService]   LHipSag stiffness: 300 damping: 30
+2.128 [ Info   ][ScriptingService]   LHipLat stiffness: 300 damping: 30
+2.128 [ Info   ][ScriptingService]   LHipYaw stiffness: 300 damping: 30
+2.128 [ Info   ][ScriptingService]   LKneeSag stiffness: 300 damping: 30
+2.128 [ Info   ][ScriptingService]   LAnkLat stiffness: 300 damping: 30
+2.128 [ Info   ][ScriptingService]   LAnkSag stiffness: 300 damping: 30
+2.128 [ Info   ][ScriptingService] Initial Impedance set!
+2.128 [ Info   ][ScriptingService] Available controllers for right_arm are:
+2.128 [ Info   ][ScriptingService]   JointPositionCtrl
+2.128 [ Info   ][ScriptingService]   JointImpedanceCtrl
+2.128 [ Info   ][ScriptingService]   JointTorqueCtrl
+2.128 [ Info   ][ScriptingService] Joint RElbj in chain right_arm has scoped name comanb::RElbj
+2.128 [ Info   ][ScriptingService] Joint RForearmPlate in chain right_arm has scoped name comanb::RForearmPlate
+2.128 [ Info   ][ScriptingService] Joint RShLat in chain right_arm has scoped name comanb::RShLat
+2.128 [ Info   ][ScriptingService] Joint RShSag in chain right_arm has scoped name comanb::RShSag
+2.128 [ Info   ][ScriptingService] Joint RShYaw in chain right_arm has scoped name comanb::RShYaw
+2.128 [ Info   ][ScriptingService] Joint RWrj1 in chain right_arm has scoped name comanb::RWrj1
+2.128 [ Info   ][ScriptingService] Joint RWrj2 in chain right_arm has scoped name comanb::RWrj2
+2.128 [ Info   ][ScriptingService] JointPositionCtrl activated!
+2.128 [ Info   ][ScriptingService] JointImpedanceCtrl activated!
+2.128 [ Info   ][ScriptingService] JointTorqueCtrl activated!
+2.128 [ Info   ][ScriptingService] Full feedback activated!
+2.128 [ Info   ][ScriptingService] right_arm PIDs:
+2.128 [ Info   ][ScriptingService]   RShSag P: 1000 I: 0 D: 0.1
+2.128 [ Info   ][ScriptingService]   RShLat P: 1000 I: 0 D: 0.1
+2.128 [ Info   ][ScriptingService]   RShYaw P: 600 I: 0 D: 0.1
+2.129 [ Info   ][ScriptingService]   RElbj P: 1000 I: 0 D: 0.1
+2.129 [ Info   ][ScriptingService]   RForearmPlate P: 100 I: 0 D: 0.1
+2.129 [ Info   ][ScriptingService]   RWrj1 P: 100 I: 0 D: 0.1
+2.129 [ Info   ][ScriptingService]   RWrj2 P: 10 I: 0 D: 0.01
+2.129 [ Info   ][ScriptingService] Gazebo Joint Controlled inited!
+2.129 [ Info   ][ScriptingService] Initial Position set!
+2.129 [ Info   ][ScriptingService] right_arm impedance:
+2.129 [ Info   ][ScriptingService]   RShSag stiffness: 300 damping: 30
+2.129 [ Info   ][ScriptingService]   RShLat stiffness: 300 damping: 30
+2.129 [ Info   ][ScriptingService]   RShYaw stiffness: 300 damping: 30
+2.129 [ Info   ][ScriptingService]   RElbj stiffness: 300 damping: 30
+2.129 [ Info   ][ScriptingService]   RForearmPlate stiffness: 300 damping: 30
+2.129 [ Info   ][ScriptingService]   RWrj1 stiffness: 300 damping: 30
+2.129 [ Info   ][ScriptingService]   RWrj2 stiffness: 300 damping: 30
+2.129 [ Info   ][ScriptingService] Initial Impedance set!
+2.129 [ Info   ][ScriptingService] Available controllers for right_leg are:
+2.129 [ Info   ][ScriptingService]   JointPositionCtrl
+2.129 [ Info   ][ScriptingService]   JointImpedanceCtrl
+2.129 [ Info   ][ScriptingService]   JointTorqueCtrl
+2.129 [ Info   ][ScriptingService] Joint RAnkLat in chain right_leg has scoped name comanb::RAnkLat
+2.129 [ Info   ][ScriptingService] Joint RAnkSag in chain right_leg has scoped name comanb::RAnkSag
+2.129 [ Info   ][ScriptingService] Joint RHipLat in chain right_leg has scoped name comanb::RHipLat
+2.129 [ Info   ][ScriptingService] Joint RHipSag in chain right_leg has scoped name comanb::RHipSag
+2.129 [ Info   ][ScriptingService] Joint RHipYaw in chain right_leg has scoped name comanb::RHipYaw
+2.129 [ Info   ][ScriptingService] Joint RKneeSag in chain right_leg has scoped name comanb::RKneeSag
+2.129 [ Info   ][ScriptingService] JointPositionCtrl activated!
+2.129 [ Info   ][ScriptingService] JointImpedanceCtrl activated!
+2.129 [ Info   ][ScriptingService] JointTorqueCtrl activated!
+2.129 [ Info   ][ScriptingService] Full feedback activated!
+2.129 [ Info   ][ScriptingService] right_leg PIDs:
+2.129 [ Info   ][ScriptingService]   RHipSag P: 3000 I: 0 D: 0.1
+2.129 [ Info   ][ScriptingService]   RHipLat P: 5000 I: 0 D: 0.1
+2.129 [ Info   ][ScriptingService]   RHipYaw P: 3000 I: 0 D: 0.1
+2.129 [ Info   ][ScriptingService]   RKneeSag P: 3000 I: 0 D: 0.1
+2.129 [ Info   ][ScriptingService]   RAnkLat P: 4000 I: 0 D: 0.1
+2.129 [ Info   ][ScriptingService]   RAnkSag P: 3000 I: 0 D: 1
+2.129 [ Info   ][ScriptingService] Gazebo Joint Controlled inited!
+2.129 [ Info   ][ScriptingService] Initial Position set!
+2.129 [ Info   ][ScriptingService] right_leg impedance:
+2.129 [ Info   ][ScriptingService]   RHipSag stiffness: 300 damping: 30
+2.129 [ Info   ][ScriptingService]   RHipLat stiffness: 300 damping: 30
+2.130 [ Info   ][ScriptingService]   RHipYaw stiffness: 300 damping: 30
+2.130 [ Info   ][ScriptingService]   RKneeSag stiffness: 300 damping: 30
+2.130 [ Info   ][ScriptingService]   RAnkLat stiffness: 300 damping: 30
+2.130 [ Info   ][ScriptingService]   RAnkSag stiffness: 300 damping: 30
+2.130 [ Info   ][ScriptingService] Initial Impedance set!
+2.130 [ Info   ][ScriptingService] Available controllers for torso are:
+2.130 [ Info   ][ScriptingService]   JointPositionCtrl
+2.130 [ Info   ][ScriptingService]   JointImpedanceCtrl
+2.130 [ Info   ][ScriptingService]   JointTorqueCtrl
+2.130 [ Info   ][ScriptingService] Joint WaistLat in chain torso has scoped name comanb::WaistLat
+2.130 [ Info   ][ScriptingService] Joint WaistSag in chain torso has scoped name comanb::WaistSag
+2.130 [ Info   ][ScriptingService] Joint WaistYaw in chain torso has scoped name comanb::WaistYaw
+2.130 [ Info   ][ScriptingService] JointPositionCtrl activated!
+2.130 [ Info   ][ScriptingService] JointImpedanceCtrl activated!
+2.130 [ Info   ][ScriptingService] JointTorqueCtrl activated!
+2.130 [ Info   ][ScriptingService] Full feedback activated!
+2.130 [ Info   ][ScriptingService] torso PIDs:
+2.130 [ Info   ][ScriptingService]   WaistLat P: 1000 I: 0 D: 0.1
+2.130 [ Info   ][ScriptingService]   WaistSag P: 1000 I: 0 D: 0.1
+2.130 [ Info   ][ScriptingService]   WaistYaw P: 1000 I: 0 D: 0.1
+2.130 [ Info   ][ScriptingService] Gazebo Joint Controlled inited!
+2.130 [ Info   ][ScriptingService] Initial Position set!
+2.130 [ Info   ][ScriptingService] torso impedance:
+2.130 [ Info   ][ScriptingService]   WaistLat stiffness: 300 damping: 30
+2.130 [ Info   ][ScriptingService]   WaistSag stiffness: 300 damping: 30
+2.130 [ Info   ][ScriptingService]   WaistYaw stiffness: 300 damping: 30
+2.130 [ Info   ][ScriptingService] Initial Impedance set!
+2.130 [ Info   ][ScriptingService] Kinematic Chains Initialized!
+2.130 [ Warning][ScriptingService] Done configuring component
+2.134 [ Info   ][ScriptingService] Created input stream for input port torso_JointPositionCtrl
+2.136 [ Info   ][ScriptingService] Created input stream for input port left_arm_JointPositionCtrl
+2.136 [ Info   ][ScriptingService] Created input stream for input port right_arm_JointPositionCtrl
+2.137 [ Info   ][ScriptingService] Created input stream for input port left_leg_JointPositionCtrl
+2.138 [ Info   ][ScriptingService] Created input stream for input port right_leg_JointPositionCtrl
+2.139 [ Info   ][ScriptingService] Created input stream for input port torso_JointPositionCtrl
+2.140 [ Info   ][ScriptingService] Created input stream for input port left_arm_JointPositionCtrl
+2.141 [ Info   ][ScriptingService] Created input stream for input port right_arm_JointPositionCtrl
+2.142 [ Info   ][ScriptingService] Created input stream for input port left_leg_JointPositionCtrl
+2.142 [ Info   ][ScriptingService] Created input stream for input port right_leg_JointPositionCtrl
+2.143 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='TaskBrowser'
+2.143 [ Info   ][TaskBrowser] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 255 and period 0 (PID= 29181 ).
+2.143 [ Info   ][Logger] Entering Task Deployer
