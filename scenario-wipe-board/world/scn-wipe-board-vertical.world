@@ -103,12 +103,6 @@
           </geometry>
         </visual>
       </link>
-      <plugin name="libgazebo-rsb-model-state-plugin" filename="libgazebo-rsb-model-state-plugin.so">
-      	<!--scope name="scope_current_pose">/gazebo/model/status</scope-->
-      </plugin>
     </model>
-
-    <!-- filename should point to the prefix TODO -->
-    <plugin name="rtt_gazebo_deployer_world_plugin" filename="librtt_gazebo_deployer_world_plugin.so"/>
   </world>
 </sdf>
