@@ -86,7 +86,7 @@
 
     <model name="WipeBoard">
 	  <!--get base_frame coordinates from urdf0.08693332427 1.24829371406 0 -1.30684015359 -1.57079632679-->
-      <pose>0 0 1.24829371406 0 0 0</pose>
+      <pose>0 0 0.83 0 0 0</pose>
       <static>true</static>
 	  <!--<link name="base">
 
