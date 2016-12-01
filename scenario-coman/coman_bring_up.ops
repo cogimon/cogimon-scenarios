@@ -38,9 +38,11 @@ coman.setInitialPosition("right_arm", ref)
 
 gazebo.toggleDynamicsSimulation(true)
 
-stream("coman.torso_JointPositionCtrl", rsb.transport.socket.scope("/torso/cmd"))
-stream("coman.left_arm_JointPositionCtrl", rsb.transport.socket.scope("/left_arm/cmd"))
 stream("coman.right_arm_JointPositionCtrl", rsb.transport.socket.scope("/right_arm/cmd"))
+stream("coman.left_arm_JointPositionCtrl", rsb.transport.socket.scope("/left_arm/cmd"))
 stream("coman.left_leg_JointPositionCtrl", rsb.transport.socket.scope("/left_leg/cmd"))
 stream("coman.right_leg_JointPositionCtrl", rsb.transport.socket.scope("/right_leg/cmd"))
+stream("coman.torso_JointPositionCtrl", rsb.transport.socket.scope("/torso/cmd"))
+stream("coman.left_arm_JointFeedback", rsb.transport.socket.scope("/left_arm/feedback"))
+stream("coman.right_arm_JointFeedback", rsb.transport.socket.scope("/right_arm/feedback"))
 
