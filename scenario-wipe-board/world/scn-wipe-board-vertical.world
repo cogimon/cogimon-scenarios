@@ -90,7 +90,7 @@
         <collision name="wbCollision">
           <geometry>
             <box>
-              <size>0.4 1.0 0.02</size>
+              <size>0.3 1.0 0.02</size>
             </box>
           </geometry>
           <surface>
@@ -106,7 +106,7 @@
         <visual name="wbVisual">
           <geometry>
             <box>
-              <size>0.4 1.0 0.02</size>
+              <size>0.3 1.0 0.02</size>
             </box>
           </geometry>
         </visual>

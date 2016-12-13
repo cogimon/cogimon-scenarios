@@ -95,14 +95,14 @@
 
 	  </joint>-->
       <link name="wbLink">
-		<pose> -0.55 0.3 0 0 0 0 </pose>
+		<pose> -0.55 0 0 0 0 0 </pose>
         <collision name="wbCollision">
           <geometry>
             <box>
-              <size>0.4 0.7 0.02</size>
+              <size>0.5 0.5 0.02</size>
             </box>
           </geometry>
-		  <surface>
+          <surface>
             <friction>
               <ode>
                 <mu>0</mu>
@@ -119,18 +119,107 @@
         <visual name="wbVisual">
           <geometry>
             <box>
-              <size>0.4 0.7 0.02</size>
+              <size>0.5 0.5 0.02</size>
             </box>
           </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
         </visual>
       </link>
     </model>
-    <gui fullscreen='0'>
-      <camera name='user_camera'>
-        <pose frame=''>-2.5 0.1 2.5 0 0.55 0.025</pose>
-        <view_controller>orbit</view_controller>
-        <projection_type>perspective</projection_type>
-      </camera>
-    </gui>
+
+    <model name="WipeBoardPillar">
+      <pose>0.0 0.0 0.4 0 0 0</pose>
+      <static>true</static>
+      <link name="pillarLink">
+	<pose> -0.55 0 0 0 0 0 </pose>
+        <collision name="pillarCollision">
+          <geometry>
+            <cylinder>
+              <radius>0.02</radius>
+              <length>0.8</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0</mu>
+                <mu2>0</mu2>
+              </ode>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name="pillarVisual">
+          <geometry>
+            <cylinder>
+              <radius>0.02</radius>
+              <length>0.8</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="ObjectBox">
+      <pose>-0.55 0 1.00 0 0 0</pose>
+      <static>false</static>
+      <link name="obLink">
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.166667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.166667</iyy>
+            <iyz>0</iyz>
+            <izz>0.166667</izz>
+          </inertia>
+        </inertial>
+        <collision name="obCollision">
+          <geometry>
+            <box>
+              <size>0.3 0.3 0.3</size>
+            </box>
+          </geometry>
+          <surface>
+              <friction>
+                <ode>
+                  <mu>0.9</mu>
+                  <mu2>0.9</mu2>
+                </ode>
+              </friction>
+        </surface>
+        </collision>
+
+        <visual name="obVisual">
+          <geometry>
+            <box>
+              <size>0.3 0.3 0.3</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
   </world>
 </sdf>
