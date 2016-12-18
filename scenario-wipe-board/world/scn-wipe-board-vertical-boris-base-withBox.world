@@ -84,19 +84,13 @@
 
     </include-->
 
-    <model name="WipeBoard">
-	  <!--get base_frame coordinates from urdf0.08693332427 1.24829371406 0 -1.30684015359 -1.57079632679-->
-      <pose>0 0 0.83 0 0 0</pose>
+    <model name="Table">
+      <pose>-0.55 0 0.79 0 0 0</pose>
       <static>true</static>
-	  <!--<link name="base">
 
-	  </link>
-	  <joint name="basetowblink">
-
-	  </joint>-->
-      <link name="wbLink">
-		<pose> -0.55 0 0 0 0 0 </pose>
-        <collision name="wbCollision">
+      <link name="boardLink">
+	<pose>0 0 0 0 0 0 </pose>
+        <collision name="boardCollision">
           <geometry>
             <box>
               <size>0.5 0.5 0.02</size>
@@ -105,8 +99,8 @@
           <surface>
             <friction>
               <ode>
-                <mu>0</mu>
-                <mu2>0</mu2>
+                <mu>0.9</mu>
+                <mu2>0.9</mu2>
               </ode>
             </friction>
             <contact>
@@ -115,8 +109,7 @@
             <bounce/>
           </surface>
         </collision>
-
-        <visual name="wbVisual">
+        <visual name="boardVisual">
           <geometry>
             <box>
               <size>0.5 0.5 0.02</size>
@@ -130,13 +123,9 @@
           </material>
         </visual>
       </link>
-    </model>
 
-    <model name="WipeBoardPillar">
-      <pose>0.0 0.0 0.4 0 0 0</pose>
-      <static>true</static>
       <link name="pillarLink">
-	<pose> -0.55 0 0 0 0 0 </pose>
+	<pose>0 0 -0.4 0 0 0 </pose>
         <collision name="pillarCollision">
           <geometry>
             <cylinder>
@@ -172,10 +161,155 @@
           </material>
         </visual>
       </link>
+
+      <link name="shortedge1Link">
+	<pose>0.0 0.2 0.03 0 0 0</pose>
+        <collision name="shortdge1Collision">
+          <geometry>
+            <box>
+              <size>0.3 0.1 0.04</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name="shortedge1Visual">
+          <geometry>
+            <box>
+              <size>0.3 0.1 0.04</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+      </link>
+
+      <link name="shortedge2Link">
+	<pose>0.0 -0.2 0.03 0 0 0</pose>
+        <collision name="shortdge2Collision">
+          <geometry>
+            <box>
+              <size>0.3 0.1 0.04</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name="shortedge2Visual">
+          <geometry>
+            <box>
+              <size>0.3 0.1 0.04</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+      </link>
+
+      <link name="longedge1Link">
+	<pose>-0.2 0.0 0.03 0 0 0</pose>
+        <collision name="longedge1Collision">
+          <geometry>
+            <box>
+              <size>0.1 0.5 0.04</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name="longedge1Visual">
+          <geometry>
+            <box>
+              <size>0.1 0.5 0.04</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+      </link>
+
+      <link name="longedge2Link">
+	<pose>0.2 0.0 0.03 0 0 0</pose>
+        <collision name="longedge2Collision">
+          <geometry>
+            <box>
+              <size>0.1 0.5 0.04</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name="longedge2Visual">
+          <geometry>
+            <box>
+              <size>0.1 0.5 0.04</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+      </link>
+
     </model>
 
     <model name="ObjectBox">
-      <pose>-0.55 0 1.00 0 0 0</pose>
+      <pose>-0.55 0 1.10 0 0 0</pose>
       <static>false</static>
       <link name="obLink">
         <inertial>
@@ -192,14 +326,14 @@
         <collision name="obCollision">
           <geometry>
             <box>
-              <size>0.3 0.3 0.3</size>
+              <size>0.3 0.3 0.6</size>
             </box>
           </geometry>
           <surface>
               <friction>
                 <ode>
-                  <mu>0.9</mu>
-                  <mu2>0.9</mu2>
+                  <mu>1.9</mu>
+                  <mu2>1.9</mu2>
                 </ode>
               </friction>
         </surface>
@@ -208,7 +342,7 @@
         <visual name="obVisual">
           <geometry>
             <box>
-              <size>0.3 0.3 0.3</size>
+              <size>0.3 0.3 0.6</size>
             </box>
           </geometry>
           <material>
@@ -220,6 +354,12 @@
         </visual>
       </link>
     </model>
-
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>-2.5 0.1 2.5 0 0.55 0.025</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
   </world>
 </sdf>
