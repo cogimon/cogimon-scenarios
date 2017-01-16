@@ -3,7 +3,6 @@
 import("eigen_typekit")
 import("kdl_typekit")
 import("rst-rt_typekit")
-import("rtt_rsbcomm")
 import("rtt_gazebo_embedded")
 require("os")
 
@@ -38,6 +37,7 @@ coman.setInitialPosition("right_arm", ref)
 
 gazebo.toggleDynamicsSimulation(true)
 
+import("rtt_rsbcomm")
 stream("coman.right_arm_JointPositionCtrl", rsb.transport.socket.scope("/right_arm/cmd"))
 stream("coman.left_arm_JointPositionCtrl", rsb.transport.socket.scope("/left_arm/cmd"))
 stream("coman.left_leg_JointPositionCtrl", rsb.transport.socket.scope("/left_leg/cmd"))
