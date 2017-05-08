@@ -85,7 +85,7 @@
     </include-->
 
     <model name="Table">
-      <pose>-0.55 0 0.79 0 0 0</pose>
+      <pose>-0.55 0 0.89 0 0 0</pose>
       <static>true</static>
 
       <link name="boardLink">
@@ -125,12 +125,12 @@
       </link>
 
       <link name="pillarLink">
-	<pose>0 0 -0.4 0 0 0 </pose>
+	<pose>0 0 -0.45 0 0 0 </pose>
         <collision name="pillarCollision">
           <geometry>
             <cylinder>
               <radius>0.02</radius>
-              <length>0.8</length>
+              <length>0.9</length>
             </cylinder>
           </geometry>
           <surface>
@@ -150,7 +150,7 @@
           <geometry>
             <cylinder>
               <radius>0.02</radius>
-              <length>0.8</length>
+              <length>0.9</length>
             </cylinder>
           </geometry>
           <material>
@@ -161,159 +161,14 @@
           </material>
         </visual>
       </link>
-<!--
-      <link name="shortedge1Link">
-	<pose>0.0 0.2 0.03 0 0 0</pose>
-        <collision name="shortdge1Collision">
-          <geometry>
-            <box>
-              <size>0.3 0.1 0.04</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>1</mu>
-                <mu2>1</mu2>
-              </ode>
-            </friction>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-          </surface>
-        </collision>
-        <visual name="shortedge1Visual">
-          <geometry>
-            <box>
-              <size>0.3 0.1 0.04</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <name>Gazebo/Red</name>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-            </script>
-          </material>
-        </visual>
-      </link>
-
-      <link name="shortedge2Link">
-	<pose>0.0 -0.2 0.03 0 0 0</pose>
-        <collision name="shortdge2Collision">
-          <geometry>
-            <box>
-              <size>0.3 0.1 0.04</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>1</mu>
-                <mu2>1</mu2>
-              </ode>
-            </friction>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-          </surface>
-        </collision>
-        <visual name="shortedge2Visual">
-          <geometry>
-            <box>
-              <size>0.3 0.1 0.04</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <name>Gazebo/Red</name>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-            </script>
-          </material>
-        </visual>
-      </link>
-
-      <link name="longedge1Link">
-	<pose>-0.2 0.0 0.03 0 0 0</pose>
-        <collision name="longedge1Collision">
-          <geometry>
-            <box>
-              <size>0.1 0.5 0.04</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>1</mu>
-                <mu2>1</mu2>
-              </ode>
-            </friction>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-          </surface>
-        </collision>
-        <visual name="longedge1Visual">
-          <geometry>
-            <box>
-              <size>0.1 0.5 0.04</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <name>Gazebo/Red</name>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-            </script>
-          </material>
-        </visual>
-      </link>
-
-      <link name="longedge2Link">
-	<pose>0.2 0.0 0.03 0 0 0</pose>
-        <collision name="longedge2Collision">
-          <geometry>
-            <box>
-              <size>0.1 0.5 0.04</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>1</mu>
-                <mu2>1</mu2>
-              </ode>
-            </friction>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-          </surface>
-        </collision>
-        <visual name="longedge2Visual">
-          <geometry>
-            <box>
-              <size>0.1 0.5 0.04</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <name>Gazebo/Red</name>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-            </script>
-          </material>
-        </visual>
-      </link>
--->
     </model>
 
     <model name="ObjectBox">
-      <pose>-0.55 0 1.10 0 0 0</pose>
+      <pose>-0.55 0 1.25 0 0 0</pose>
       <static>false</static>
       <link name="obLink">
         <inertial>
-          <mass>0.001</mass>
+          <mass>1</mass>
           <inertia>
             <ixx>0.166667</ixx>
             <ixy>0</ixy>
@@ -328,7 +183,7 @@
          <pose>0 0.075 0 0 0 0</pose>
           <geometry>
             <box>
-              <size>0.3 0.15 0.6</size>
+              <size>0.3 0.15 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -344,7 +199,7 @@
          <pose>0 0.075 0 0 0 0</pose>
           <geometry>
             <box>
-              <size>0.3 0.15 0.6</size>
+              <size>0.3 0.15 0.3</size>
             </box>
           </geometry>
           <material>
@@ -359,7 +214,7 @@
          <pose>0 -0.075 0 0 0 0</pose>
           <geometry>
             <box>
-              <size>0.3 0.15 0.6</size>
+              <size>0.3 0.15 0.3</size>
             </box>
           </geometry>
           <surface>
@@ -375,7 +230,7 @@
          <pose>0 -0.075 0 0 0 0</pose>
           <geometry>
             <box>
-              <size>0.3 0.15 0.6</size>
+              <size>0.3 0.15 0.3</size>
             </box>
           </geometry>
           <material>
