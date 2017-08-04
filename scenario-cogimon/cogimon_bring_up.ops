@@ -32,4 +32,8 @@ cogimon.loadURDFAndSRDF(urdf_path, srdf_path)
 cogimon.getModel("cogimon")
 cogimon.configure()
 
+var array ref = array(0.0, -0.15, 0.0, 0.3, -0.15, 0.0)
+cogimon.setInitialPosition("left_leg", ref)
+cogimon.setInitialPosition("right_leg", ref)
+
 gazebo.toggleDynamicsSimulation(true)
